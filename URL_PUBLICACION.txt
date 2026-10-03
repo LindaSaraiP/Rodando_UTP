@@ -1,0 +1,9 @@
+RODANDO UTP — URL DE PUBLICACIÓN
+
+Desarrollo local:
+http://localhost:3000
+
+URL pública final:
+PENDIENTE DE DESPLEGAR EN UN SERVIDOR NODE.JS CON HTTPS.
+
+La página incluye una sección “Publicación” que mostrará automáticamente la URL pública real cuando el proyecto sea desplegado.

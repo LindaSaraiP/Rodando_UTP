@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#071612">
+  <meta name="description" content="Rodando UTP es una PWA de emprendimiento y movilidad colaborativa que conecta estudiantes de la Universidad Tecnológica de Puebla para compartir trayectos y gastos de gasolina.">
+  <meta name="keywords" content="Rodando UTP, PWA, carpool, UTP, Puebla, emprendimiento, movilidad colaborativa">
+  <meta name="author" content="Rodando UTP">
+  <title>Rodando UTP | Movilidad colaborativa universitaria</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/img/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+
+  <header class="topbar" id="inicio">
+    <nav class="shell nav" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Rodando UTP, inicio">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>Rodando <b>UTP</b></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#proyecto">Proyecto</a>
+        <a href="#rutas">Rutas</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#seguridad">Seguridad</a>
+        <a href="#publicacion">Publicación</a>
+        <button class="btn ghost small" id="installBtn" hidden>Instalar app</button>
+        <button class="btn ghost small" id="loginBtn">Iniciar sesión</button>
+        <button class="btn primary small" id="registerBtn">Crear cuenta</button>
+        <button class="user-pill" id="userMenuBtn" hidden>
+          <span id="userInitial">U</span><span id="userName">Usuario</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero shell" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> Emprendimiento · movilidad colaborativa · UTP</div>
+        <h1 id="heroTitle">Comparte el camino.<br><span>Divide la gasolina.</span></h1>
+        <p class="hero-lead">Rodando UTP conecta a estudiantes que ya viajan en automóvil hacia la Universidad Tecnológica de Puebla con compañeros que viven o pasan por la misma zona.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#rutas">Buscar viaje</a>
+          <button class="btn outline" id="publishHeroBtn">Publicar mi ruta</button>
+          <button class="btn text-action" id="installHeroBtn" type="button">⬇ Instalar PWA</button>
+        </div>
+        <div class="stats" aria-label="Características principales">
+          <div><strong>Real</strong><span>reservas y SQLite</span></div>
+          <div><strong>PWA</strong><span>instalable y offline</span></div>
+          <div><strong>Seguro</strong><span>sesiones protegidas</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="art-glow" aria-hidden="true"></div>
+        <img src="/img/hero-carpool.svg" alt="Ilustración de estudiantes compartiendo automóvil rumbo a la UTP" width="760" height="560">
+        <div class="float-card route-float"><span>↗</span><div><small>Trayecto compartido</small><b>Cholula → UTP</b></div></div>
+        <div class="float-card secure-float"><span>✓</span><div><small>Experiencia</small><b>Responsive + PWA</b></div></div>
+      </div>
+    </section>
+
+    <section class="shell project-section" id="proyecto" aria-labelledby="projectTitle">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">Innovación y emprendimiento</span>
+          <h2 id="projectTitle">Una solución para dos problemas cotidianos</h2>
+          <p>La propuesta aprovecha viajes que ya se realizan para reducir tiempos de traslado del pasajero y repartir parte del gasto de gasolina del conductor.</p>
+        </div>
+        <div class="project-tag">Idea de negocio con impacto universitario</div>
+      </div>
+
+      <div class="problem-grid">
+        <article class="problem-card danger-card">
+          <span class="card-kicker">01 · Problema</span>
+          <h3>Traslados largos y costosos</h3>
+          <p>Estudiantes provenientes de Cholula, Angelópolis, Amozoc y otras zonas pueden utilizar varios transportes para llegar a la UTP, mientras muchos automóviles llegan con asientos disponibles.</p>
+          <ul>
+            <li>Más tiempo entre transbordos.</li>
+            <li>Gasto individual de gasolina.</li>
+            <li>Capacidad de los vehículos desaprovechada.</li>
+          </ul>
+        </article>
+        <article class="problem-card solution-card">
+          <span class="card-kicker">02 · Solución</span>
+          <h3>Movilidad colaborativa</h3>
+          <p>El conductor publica la ruta que ya realizará; el pasajero localiza una salida compatible, reserva lugares y aporta únicamente al gasto del trayecto.</p>
+          <ul>
+            <li>Rutas, horario y lugares visibles.</li>
+            <li>Reservación registrada en base de datos.</li>
+            <li>Comunidad centrada en estudiantes.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="value-grid">
+        <div class="value-visual">
+          <img src="/img/innovation-network.svg" alt="Ilustración de innovación colaborativa de Rodando UTP" loading="lazy" width="900" height="600">
+        </div>
+        <div class="value-copy">
+          <span class="eyebrow">Propuesta de valor</span>
+          <h2>Más que compartir un auto: aprovechar mejor un trayecto existente</h2>
+          <p>Rodando UTP no plantea un servicio de taxi. El viaje existe antes de la reservación; la plataforma organiza coincidencias entre estudiantes y facilita que el costo de gasolina se divida.</p>
+          <div class="value-list">
+            <div><span>⚡</span><p><b>Rapidez</b><br>Menos combinaciones de transporte cuando existe una ruta compatible.</p></div>
+            <div><span>💸</span><p><b>Ahorro compartido</b><br>La aportación se orienta al gasto del trayecto, no a una tarifa comercial.</p></div>
+            <div><span>🌱</span><p><b>Uso eficiente</b><br>Un mismo viaje puede transportar a más estudiantes y aprovechar asientos vacíos.</p></div>
+            <div><span>📱</span><p><b>Experiencia PWA</b><br>Se instala desde el navegador y conserva recursos esenciales para abrirse sin conexión.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell app-section" id="rutas" aria-labelledby="routesTitle">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">Funcionalidad real</span>
+          <h2 id="routesTitle">Encuentra una ruta</h2>
+          <p>Los viajes se consultan desde el servidor y los lugares disponibles se calculan a partir de reservaciones guardadas en SQLite.</p>
+        </div>
+        <div class="status-group">
+          <div class="online-badge" id="networkBadge">● En línea</div>
+          <div class="pwa-badge" id="pwaStatus">PWA lista</div>
+        </div>
+      </div>
+
+      <form class="filters" id="searchForm" autocomplete="off">
+        <label><span>📍 Zona de salida</span><input id="originFilter" name="origin" placeholder="Ej. Cholula" maxlength="60"></label>
+        <label><span>📅 Fecha</span><input id="dateFilter" type="date" name="date"></label>
+        <label><span>👥 Lugares</span><select id="seatFilter" name="seats"><option value="1">1 o más</option><option value="2">2 o más</option><option value="3">3 o más</option><option value="4">4</option></select></label>
+        <button class="btn primary" type="submit">Buscar rutas</button>
+      </form>
+      <div class="results-bar"><span id="resultText">Cargando rutas…</span><button class="link-btn" type="button" id="clearFilters">Limpiar filtros</button></div>
+      <div class="routes-grid" id="routesGrid" aria-live="polite"></div>
+      <div class="empty" id="routesEmpty" hidden><div>🛣️</div><h3>No encontramos rutas</h3><p>Prueba otra zona o fecha, o publica un viaje nuevo.</p></div>
+    </section>
+
+    <section class="shell info-section" id="como-funciona" aria-labelledby="howTitle">
+      <div class="section-head centered">
+        <span class="eyebrow">Experiencia completa</span>
+        <h2 id="howTitle">¿Cómo funciona Rodando UTP?</h2>
+        <p>El flujo de registro, publicación y reservación está conectado al backend. Los botones no son solo elementos visuales.</p>
+      </div>
+      <div class="steps">
+        <article><span class="step-no">01</span><div class="step-icon">🎓</div><h3>Crea tu cuenta</h3><p>Registra nombre, matrícula, correo institucional y una contraseña robusta.</p></article>
+        <article><span class="step-no">02</span><div class="step-icon">🚗</div><h3>Publica o busca</h3><p>Indica zona, punto de encuentro, fecha, vehículo, lugares y aportación de gasolina.</p></article>
+        <article><span class="step-no">03</span><div class="step-icon">🤝</div><h3>Reserva</h3><p>La transacción SQLite valida la disponibilidad antes de confirmar y evita sobreventa de lugares.</p></article>
+        <article><span class="step-no">04</span><div class="step-icon">📲</div><h3>Instala la PWA</h3><p>Desde un navegador compatible puedes agregar Rodando UTP al escritorio o pantalla de inicio.</p></article>
+      </div>
+    </section>
+
+    <section class="shell multimedia-section" id="multimedia" aria-labelledby="mediaTitle">
+      <div class="section-head centered">
+        <span class="eyebrow">Contenido multimedia</span>
+        <h2 id="mediaTitle">El proyecto explicado visualmente</h2>
+        <p>La interfaz incorpora texto, imágenes locales optimizadas y video, manteniendo una experiencia consistente en pantallas grandes y pequeñas.</p>
+      </div>
+
+      <div class="media-grid">
+        <figure class="media-card media-large">
+          <img src="/img/utp-route.svg" alt="Representación visual de una ruta rumbo a la UTP" loading="lazy" width="200" height="100">
+          <figcaption><b>Rutas compatibles</b><span>El estudiante busca un punto de salida cercano y una hora conveniente.</span></figcaption>
+        </figure>
+        <figure class="media-card">
+          <img src="/img/student-community.svg" alt="Comunidad estudiantil conectada mediante Rodando UTP" loading="lazy" width="600" height="300">
+          <figcaption><b>Comunidad y confianza</b><span>El diseño prioriza cuentas institucionales y contacto posterior a la reserva.</span></figcaption>
+        </figure>
+        <figure class="media-card video-card">
+          <video controls preload="metadata" poster="/img/video-poster.svg" aria-label="Video de presentación de Rodando UTP">
+            <source src="/media/rodando-utp-presentacion.mp4" type="video/mp4">
+            Tu navegador no puede reproducir el video. Puedes descargarlo desde la carpeta media del proyecto.
+          </video>
+          <figcaption><b>Video de presentación</b><span>Resumen breve del problema, propuesta de valor y funcionamiento.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+
+    <section class="shell dashboard" id="dashboard" hidden aria-labelledby="dashboardTitle">
+      <div class="section-head split">
+        <div><span class="eyebrow">Mi cuenta</span><h2 id="dashboardTitle">Panel de viajes</h2><p>Administra tus publicaciones y reservaciones.</p></div>
+        <button class="btn primary" id="publishDashboardBtn">+ Publicar ruta</button>
+      </div>
+      <div class="dashboard-grid">
+        <div class="dash-card"><div class="dash-title"><h3>Mis rutas publicadas</h3><span id="publishedCount">0</span></div><div id="publishedList" class="dash-list"></div></div>
+        <div class="dash-card"><div class="dash-title"><h3>Mis reservaciones</h3><span id="reservationCount">0</span></div><div id="reservationList" class="dash-list"></div></div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <div>
+        <div class="brand"><span class="brand-mark">R</span><span>Rodando <b>UTP</b></span></div>
+        <p>Proyecto académico de innovación, creatividad y emprendimiento enfocado en movilidad colaborativa universitaria.</p>
+      </div>
+      <div><b>Proyecto</b><a href="#proyecto">Propuesta</a><a href="#como-funciona">Funcionamiento</a><a href="#multimedia">Multimedia</a></div>
+      <div><b>Aplicación</b><a href="#rutas">Buscar rutas</a><a href="#seguridad">Seguridad</a><a href="#publicacion">Publicación</a></div>
+      <div><b>Tecnologías</b><span>HTML5 · CSS3 · JavaScript</span><span>Node.js · SQLite</span><span>Manifest · Service Worker</span></div>
+    </div>
+    <div class="shell footer-bottom"><span>© 2026 Rodando UTP</span><span>Comparte trayectos; no opera como servicio de taxi.</span></div>
+  </footer>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+
+  <dialog class="modal" id="authModal">
+    <form method="dialog" class="modal-card" id="authForm">
+      <button class="modal-close" value="cancel" aria-label="Cerrar">×</button>
+      <div class="modal-icon">🔐</div><span class="eyebrow" id="authEyebrow">Acceso seguro</span><h2 id="authTitle">Iniciar sesión</h2><p id="authSubtitle">Usa tu correo institucional.</p>
+      <input type="hidden" id="authMode" value="login">
+      <div class="form-grid one">
+        <label class="register-only" hidden><span>Nombre completo</span><input id="authName" autocomplete="name" maxlength="80"></label>
+        <label class="register-only" hidden><span>Matrícula</span><input id="authStudentId" autocomplete="username" maxlength="24"></label>
+        <label><span>Correo institucional</span><input id="authEmail" type="email" autocomplete="email" required></label>
+        <label><span>Contraseña</span><input id="authPassword" type="password" autocomplete="current-password" minlength="10" maxlength="128" required><small class="register-only" hidden>10+ caracteres, mayúscula, minúscula y número.</small></label>
+      </div>
+      <div class="modal-actions"><button class="btn primary full" id="authSubmit" value="default">Entrar</button><button type="button" class="link-btn" id="switchAuth">¿No tienes cuenta? Regístrate</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="publishModal">
+    <form method="dialog" class="modal-card wide" id="publishForm">
+      <button class="modal-close" value="cancel" aria-label="Cerrar">×</button><div class="modal-icon">🚗</div><span class="eyebrow">Nueva ruta</span><h2>Publica tus lugares libres</h2><p>Comparte únicamente un viaje que ya ibas a realizar. La aportación debe corresponder al gasto del trayecto.</p>
+      <div class="form-grid two">
+        <label><span>Zona de salida</span><input name="origin" required maxlength="60" placeholder="Ej. Cholula"></label>
+        <label><span>Punto de encuentro</span><input name="pickupPoint" required maxlength="120" placeholder="Lugar público y seguro"></label>
+        <label><span>Fecha y hora de salida</span><input name="departureAt" type="datetime-local" required></label>
+        <label><span>Lugares disponibles</span><select name="seatsTotal" required><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></label>
+        <label><span>Aportación por persona (MXN)</span><input name="contribution" type="number" min="0" max="500" step="1" required placeholder="35"></label>
+        <label><span>Vehículo</span><input name="vehicle" required maxlength="60" placeholder="Nissan Versa 2020"></label>
+        <label><span>Color</span><input name="color" required maxlength="30" placeholder="Gris"></label>
+        <label><span>Últimos 4 caracteres de placa</span><input name="plateLast4" required minlength="3" maxlength="4" placeholder="4K2M"></label>
+        <label class="span-2"><span>Notas</span><textarea name="notes" maxlength="240" rows="3" placeholder="Indicaciones, equipaje, puntualidad…"></textarea></label>
+      </div>
+      <div class="modal-actions row"><button class="btn ghost" value="cancel">Cancelar</button><button class="btn primary" id="publishSubmit" value="default">Publicar ruta</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="reserveModal">
+    <form method="dialog" class="modal-card" id="reserveForm">
+      <button class="modal-close" value="cancel" aria-label="Cerrar">×</button><div class="modal-icon">🎫</div><span class="eyebrow">Reservación</span><h2 id="reserveTitle">Apartar lugar</h2><div id="reserveSummary" class="reserve-summary"></div>
+      <input type="hidden" id="reserveRideId"><label><span>Número de lugares</span><select id="reserveSeats"></select></label>
+      <div class="modal-actions row"><button class="btn ghost" value="cancel">Cancelar</button><button class="btn primary" id="reserveSubmit" value="default">Confirmar reserva</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="userModal">
+    <div class="modal-card compact"><button class="modal-close" id="closeUserModal" aria-label="Cerrar">×</button><div class="modal-icon">👤</div><span class="eyebrow">Mi cuenta</span><h2 id="accountName">Usuario</h2><p id="accountEmail"></p><div class="account-actions"><a class="btn outline full" href="#dashboard" id="goDashboard">Ver mi panel</a><button class="btn danger full" id="logoutBtn">Cerrar sesión</button></div></div>
+  </dialog>
+
+  <noscript><div class="noscript">Rodando UTP necesita JavaScript para buscar, publicar y reservar rutas.</div></noscript>
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

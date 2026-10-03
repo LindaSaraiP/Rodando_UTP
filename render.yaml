@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: rodando-utp
+    runtime: node
+    plan: free
+    buildCommand: ""
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ALLOWED_EMAIL_DOMAIN
+        value: utpuebla.edu.mx
+      - key: SESSION_DAYS
+        value: 7

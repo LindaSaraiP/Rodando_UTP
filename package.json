@@ -1,0 +1,14 @@
+{
+  "name": "rodando-utp",
+  "version": "3.0.0",
+  "private": true,
+  "description": "PWA responsiva de movilidad colaborativa para estudiantes de la Universidad Tecnológica de Puebla, con Node.js, SQLite y seguridad aplicada.",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "dev": "NODE_ENV=development node --no-warnings server.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
